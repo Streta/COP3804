@@ -65,11 +65,13 @@ public class mendietaRpgm1
                 }
                 else
                 {
-                    System.out.printf("   ");
+                    String space = "   ";
+                    System.out.printf("%s", space);
                 }
             }
+            System.out.printf("\n");
         }
-        System.out.println("Total odd sum: " + oddCounter);
+        System.out.printf("\nTotal value of odd numbers: %d\n", oddCounter);
     }
 
     public static void printEven(int[][] inputArray)
@@ -87,11 +89,13 @@ public class mendietaRpgm1
                 }
                 else
                 {
-                    System.out.printf("   ");
+                    String space = "   ";
+                    System.out.printf("%s", space);
                 }
             }
+            System.out.printf("\n");
         }
-        System.out.println("Total odd sum: " + evenCounter);
+        System.out.printf("\nTotal value of even numbers: %d\n", evenCounter);
     }
 
     public static void printAll(int[][] inputArray)
@@ -105,7 +109,7 @@ public class mendietaRpgm1
                 total += inputArray[x][y];
             }
         }
-        System.out.println("Total amount: " + total);
+        System.out.printf("\nTotal values of all numbers: %d\n", total);
     }
     public static void main( String args[] )
     {
