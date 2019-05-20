@@ -33,7 +33,7 @@ public class mendietaRpgm1
         {
             for (int j = 0; j < array.length; j++)
             {
-                array[i][j] = i + j * 3;
+                array[i][j] = (i + j) * 3;
             }
         }
     }
