@@ -15,8 +15,23 @@ public class mendietarConstructor {
     private int first = 0;
     private double second = 0.0;
 
+    public mendietarConstructor() {
+        System.out.printf("%s", "Welcome to the empty constructor");
+    }
+
     public mendietarConstructor(String welcome) {
         this.welcome = welcome;
+    }
+
+    public mendietarConstructor(int first, String welcome) {
+        this.first = first;
+        this.welcome = welcome;
+    }
+
+    public mendietarConstructor(int first, String welcome, double second) {
+        this.first = first;
+        this.welcome = welcome;
+        this.second = second;
     }
 
     public void setString(String userString) {
@@ -53,5 +68,4 @@ public class mendietarConstructor {
         String info = getDouble() + " " + getString() + " " + getInt();
         return info;
     }
-
 }

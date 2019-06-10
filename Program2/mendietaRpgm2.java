@@ -19,33 +19,27 @@ public class mendietaRpgm2 {
     }
 
     public void two() {
-        mendietarConstructor msg = new mendietarConstructor("Welcome to my empty constructor");
-
-        System.out.printf("%s\n", msg.getString());
-        msg.setInt(1);
-        msg.setDouble(1.1);
-        msg.setString("1");
-        msg.setValues(44.28, "Something", 60);
+        mendietarConstructor msg = new mendietarConstructor();
+        System.out.printf("%s\n", msg);
 
         System.out.printf("--- Initial Values --- \n");
-        System.out.printf("%s\n", msg.getValues());
-
+        mendietarConstructor one = new mendietarConstructor(0, "Empty", 0.0);
+        System.out.printf("%s\n", one.getValues());
         System.out.println();
 
         System.out.printf("--- Assigned Joe ---\n");
-        msg.setString("Joe");
-        System.out.printf("%s\n", msg.getValues());
-
+        mendietarConstructor two = new mendietarConstructor("Joe");
+        System.out.printf("%s\n", two.getValues());
         System.out.println();
 
-        System.out.printf("--- Assigned 123 ---\n");
-        msg.setInt(123);
-        System.out.printf("%s", msg.getValues());
-
+        System.out.printf("--- Assigned 123 & Joe ---\n");
+        mendietarConstructor three = new mendietarConstructor(123, "Joe");
+        System.out.printf("%s\n", three.getValues());
         System.out.println();
 
-        System.out.printf("--- Assigned 12.0 ---");
-        msg.setDouble(12.00);
-        System.out.printf("\n%s", msg.getValues());
+        System.out.printf("--- Assigned 12.00, 123, & Joe ---\n");
+        mendietarConstructor four = new mendietarConstructor(123, "Joe", 12.00);
+        System.out.printf("%s\n", four.getValues());
+        System.out.println();
     }
 }
