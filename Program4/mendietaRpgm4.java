@@ -14,62 +14,89 @@
  ..........{ Roosevelt Mendieta }..........
 *********************************************************************/
 
+import java.io.*;
 import java.util.*;
 
 public class mendietaRpgm4 {
-  public static void main(String args[]) {
-    theLinkedList();
-    theStack();
-    theQueue();
+  public static void main(String args[]) throws java.io.IOException {
+    System.out.printf("%s", theLinkedList());
+    System.out.printf("%s", theQueue());
+    System.out.printf("%s", theStack());
+
   }
 
-  public static void theLinkedList() {
+  public static String theLinkedList() throws java.io.IOException {
     ArrayList<Object> foo = new ArrayList<Object>();
+
+    String output = " ";
 
     foo.add("mendieta");
     foo.add("java");
     foo.add("FIU");
     foo.add(4.00);
 
-    System.out.println(foo);
+    output += System.out.printf("%s\n", foo);
 
     foo.remove(2);
     foo.remove(1);
 
-    System.out.println(foo);
+    output += System.out.printf("%s\n", foo);
+    output += System.out.printf("\n");
+    return output;
   }
 
-  public static void theStack() {
+  public static String theStack() throws java.io.IOException {
     Stack<String> foo = new Stack<>();
 
-    System.out.println("Initial stack: " + foo);
+    String output = " ";
+
+    output += System.out.printf("Initial stack: %s\n", foo);
 
     foo.add("First");
     foo.add("Second");
     foo.add("Third");
     foo.add("Fourth");
 
-    System.out.println("Stack before clear : " + foo);
+    output += System.out.printf("Stack before clear: %s\n", foo);
 
     foo.clear();
 
-    System.out.println("Stack after clear : " + foo);
+    output += System.out.printf("Stack after clear: %s\n", foo);
+    output += System.out.printf("\n");
+
+    return output;
   }
 
-  public static void theQueue() {
+  public static String theQueue() throws java.io.IOException {
     PriorityQueue<String> foo = new PriorityQueue<String>();
 
-    System.out.printf("Initial queue: %s\n", foo);
+    String output = " ";
+
+    output += System.out.printf("Initial queue: %s\n", foo);
 
     foo.offer("First");
     foo.offer("Second");
     foo.offer("Third");
     foo.offer("Fourth");
 
-    System.out.printf("Queue before clear: %s\n", foo);
+    output += System.out.printf("Queue before clear: %s\n", foo);
 
     foo.clear();
 
-    System.out.printf("Queue after clear: %s\n", foo);
+    output += System.out.printf("Queue after clear: %s\n", foo);
+    output += System.out.printf("\n");
+
+    return output;
+  }
+
+  public static void theFile() throws java.io.IOException {
+    FileWriter writer = new FileWriter("./myFile.txt");
+    BufferedWriter buffer = new BufferedWriter(writer);
+
+    buffer.write(theQueue());
+    buffer.write(theStack());
+    buffer.write(theLinkedList());
+
+    buffer.close();
   }
 }
