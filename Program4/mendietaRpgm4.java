@@ -20,13 +20,13 @@ import java.util.*;
 public class mendietaRpgm4 {
   public static void main(String args[]) throws java.io.IOException {
     System.out.printf("%s", theLinkedList());
-    System.out.printf("%s", theQueue());
     System.out.printf("%s", theStack());
+    System.out.printf("%s", theQueue());
 
   }
 
   public static String theLinkedList() throws java.io.IOException {
-    ArrayList<Object> foo = new ArrayList<Object>();
+    LinkedList<Object> foo = new LinkedList<Object>();
 
     String output = " ";
 
@@ -35,13 +35,13 @@ public class mendietaRpgm4 {
     foo.add("FIU");
     foo.add(4.00);
 
-    output += System.out.printf("%s\n", foo);
+    output += String.format("%s\n", foo);
 
     foo.remove(2);
     foo.remove(1);
 
-    output += System.out.printf("%s\n", foo);
-    output += System.out.printf("\n");
+    output += String.format("%s\n", foo);
+    output += String.format("\n");
     return output;
   }
 
@@ -50,19 +50,19 @@ public class mendietaRpgm4 {
 
     String output = " ";
 
-    output += System.out.printf("Initial stack: %s\n", foo);
+    output += String.format("Initial stack: %s\n", foo);
 
     foo.add("First");
     foo.add("Second");
     foo.add("Third");
     foo.add("Fourth");
 
-    output += System.out.printf("Stack before clear: %s\n", foo);
+    output += String.format("Stack before clear: %s\n", foo);
 
     foo.clear();
 
-    output += System.out.printf("Stack after clear: %s\n", foo);
-    output += System.out.printf("\n");
+    output += String.format("Stack after clear: %s\n", foo);
+    output += String.format("\n");
 
     return output;
   }
@@ -72,25 +72,25 @@ public class mendietaRpgm4 {
 
     String output = " ";
 
-    output += System.out.printf("Initial queue: %s\n", foo);
+    output += String.format("Initial queue: %s\n", foo);
 
     foo.offer("First");
     foo.offer("Second");
     foo.offer("Third");
     foo.offer("Fourth");
 
-    output += System.out.printf("Queue before clear: %s\n", foo);
+    output += String.format("Queue before clear: %s\n", foo);
 
     foo.clear();
 
-    output += System.out.printf("Queue after clear: %s\n", foo);
-    output += System.out.printf("\n");
+    output += String.format("Queue after clear: %s\n", foo);
+    output += String.format("\n");
 
     return output;
   }
 
   public static void theFile() throws java.io.IOException {
-    FileWriter writer = new FileWriter("./myFile.txt");
+    FileWriter writer = new FileWriter("myFile.txt");
     BufferedWriter buffer = new BufferedWriter(writer);
 
     buffer.write(theQueue());
