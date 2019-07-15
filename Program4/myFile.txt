@@ -1,11 +1,19 @@
  Initial queue: []
-Queue before clear: [First, Fourth, Third, Second]
+Queue before clear: [First, Second, Third, Fourth]
+Peeking Queue: First
+Peeking Queue: Second
+Peeking Queue: Third
+Peeking Queue: Fourth
 Queue after clear: []
 
  Initial stack: []
 Stack before clear: [First, Second, Third, Fourth]
+Peeking stack: Fourth
+Peeking stack: Third
+Peeking stack: Second
+Peeking stack: First
 Stack after clear: []
 
- [mendieta, java, FIU, 4.0]
-[mendieta, 4.0]
+ Initial linkedlist: [mendieta, java, FIU, 4.0]
+Removed items from linkedlist: [mendieta, 4.0]
 

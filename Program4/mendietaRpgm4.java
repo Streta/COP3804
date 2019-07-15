@@ -35,12 +35,12 @@ public class mendietaRpgm4 {
     foo.add("FIU");
     foo.add(4.00);
 
-    output += String.format("%s\n", foo);
+    output += String.format("Initial linkedlist: %s\n", foo);
 
     foo.remove(2);
     foo.remove(1);
 
-    output += String.format("%s\n", foo);
+    output += String.format("Removed items from linkedlist: %s\n", foo);
     output += String.format("\n");
     return output;
   }
@@ -52,14 +52,21 @@ public class mendietaRpgm4 {
 
     output += String.format("Initial stack: %s\n", foo);
 
-    foo.add("First");
-    foo.add("Second");
-    foo.add("Third");
-    foo.add("Fourth");
+    foo.push("First");
+    foo.push("Second");
+    foo.push("Third");
+    foo.push("Fourth");
 
     output += String.format("Stack before clear: %s\n", foo);
 
-    foo.clear();
+    output += String.format("Peeking stack: %s\n", foo.peek());
+    foo.pop();
+    output += String.format("Peeking stack: %s\n", foo.peek());
+    foo.pop();
+    output += String.format("Peeking stack: %s\n", foo.peek());
+    foo.pop();
+    output += String.format("Peeking stack: %s\n", foo.peek());
+    foo.pop();
 
     output += String.format("Stack after clear: %s\n", foo);
     output += String.format("\n");
@@ -68,20 +75,27 @@ public class mendietaRpgm4 {
   }
 
   public static String theQueue() throws java.io.IOException {
-    PriorityQueue<String> foo = new PriorityQueue<String>();
+    Queue<String> foo = new LinkedList<String>();
 
     String output = " ";
 
     output += String.format("Initial queue: %s\n", foo);
 
-    foo.offer("First");
-    foo.offer("Second");
-    foo.offer("Third");
-    foo.offer("Fourth");
+    foo.add("First");
+    foo.add("Second");
+    foo.add("Third");
+    foo.add("Fourth");
 
     output += String.format("Queue before clear: %s\n", foo);
 
-    foo.clear();
+    output += String.format("Peeking Queue: %s\n", foo.peek());
+    foo.remove();
+    output += String.format("Peeking Queue: %s\n", foo.peek());
+    foo.remove();
+    output += String.format("Peeking Queue: %s\n", foo.peek());
+    foo.remove();
+    output += String.format("Peeking Queue: %s\n", foo.peek());
+    foo.remove();
 
     output += String.format("Queue after clear: %s\n", foo);
     output += String.format("\n");
