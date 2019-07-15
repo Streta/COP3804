@@ -1,0 +1,11 @@
+ Initial queue: []
+Queue before clear: [First, Fourth, Third, Second]
+Queue after clear: []
+
+ Initial stack: []
+Stack before clear: [First, Second, Third, Fourth]
+Stack after clear: []
+
+ [mendieta, java, FIU, 4.0]
+[mendieta, 4.0]
+

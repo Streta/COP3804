@@ -22,7 +22,7 @@ public class mendietaRpgm4 {
     System.out.printf("%s", theLinkedList());
     System.out.printf("%s", theStack());
     System.out.printf("%s", theQueue());
-
+    theFile();
   }
 
   public static String theLinkedList() throws java.io.IOException {
